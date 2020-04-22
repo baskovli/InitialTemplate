@@ -1,0 +1,47 @@
+@import "../../../styles/variables";
+
+.autocomplete {
+    width: 100%;
+    li {
+        display: block;
+        /*removing underlines from anchor element*/
+        text-decoration: none;
+        background-color: $grey100;
+    }
+
+    ul {
+        /*removing predefined bullet points from list*/
+        list-style: none;
+        /*removing padding from list items*/
+        padding: 0;
+        overflow-y: auto;
+        max-height: 400px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    ul li {
+        font-size: 12px;
+    }
+
+    /*moving it slightly toware right when hovered*/
+    ul li:hover {
+        background-color: $blue10;
+        /*transform*/
+        // -webkit-transform: translateX(10px);
+        // -moz-transform: translateX(10px);
+        // -ms-transform: translateX(10px);
+        // -o-transform: translateX(10px);
+        // transform: translateX(10px);
+    }
+
+    /*now first we will hide the suggestion list*/
+    .suggestions li {
+        overflow: hidden;
+        height: 0;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+}

@@ -1,0 +1,26 @@
+@import "../../../../styles/variables";
+
+.progress-bar {
+  position: relative;
+  background-color: $background;
+  &.completed {
+    .progress-bar_percentage {
+      background-color: $green;
+    }
+  }
+  &.error {
+    .progress-bar_percentage {
+      background-color: $red;
+    }
+  }
+}
+
+.progress-bar_percentage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: $primary;
+  transition: width 150ms ease-out;
+}
